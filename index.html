@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION FORM</title>
+    <style>
+        body {
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+
+        h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 50px;
+            font-weight: bold;
+            font-style: italic;
+            margin-left: 200px;
+        }
+
+        #n,
+        #e,
+        #p,
+        #gender,
+        #event {
+            display: block;
+            margin: 8px 0 16px;
+            padding: 8px;
+            width: 220px;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 20px auto;
+        }
+
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Registration form</h1>
+    <form id="form1">
+
+        <label>name</label>
+        <input type="name" placeholder="enter name" id="n">
+        <label>email</label>
+        <input type="email" placeholder="enter email" id="e">
+        <label>phone no</label>
+        <input type="tel" placeholder="enter phone number" id="p">
+
+
+        <select id="gender">
+            <option value="male">male</option>>
+            <option value="female">female</option>
+        </select>
+
+        <select id="event">
+            <option value="event1">stand up comedy</option>
+            <option value="event2">workshop</option>
+            <option value="event3">cinema event</option>
+        </select>
+        <button type="submit" onclick="register()">register</button>
+    </form>
+    <script>
+        function register() {
+
+            let name = document.getElementById('n').value;
+            let email = document.getElementById('e').value;
+            let phone = document.getElementById('p').value;
+            if (name == "" || email == "" || phone == "") {
+                alert("please fill the details");
+            }
+            else {
+                alert("registration successful");
+            }
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
